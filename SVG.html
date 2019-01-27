@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SVG</title>
+    <script src="Snap/dist/snap.svg-min.js"></script>
+  </head>
+  <body>
+  <svg width="600" height="210">
+    <!--<pattern id="pattern" patternUnits="userSpaceOnUse" x="0" y="0" width="10" height="10" viewBox="0 0 10 10">-->
+    <path class="text" d="M10,10 C10,10 10,210 10,210 M10,110 C10,110 80,110 80,110 M80,10 C80,10 80,210 80,210"/>
+    <path class="text" d="M110,10 C110,10 110,210 110,210 M110,20 C110,20 180,20 180,20 M110,110 C110,110 180,110 180,110 M110,200 C110,200 180,200 180,200"/>
+    <path class="text" d="M200,15 C200,15 300,205 300,205 M200,205 C200,205 300,15 300,15"/>
+  </svg>
+  <style>
+    rect {
+      fill: #f33;
+    }
+    circle {
+      fill: #3f3;
+    }
+    .text {
+      fill: none;
+      stroke: #333333;
+      stroke-width: 20;
+    }
+    .hex {
+      fill: none;
+      stroke: #333333;
+      stroke-width: 20;
+      transition-property: all;
+      transition-duration 2s;
+      transition: transform
+    }
+    .hex: hover {
+
+    }
+  </style>
+  <script>
+    var s = Snap();
+    bigCircle = s.circle(150, 100, 50);
+    bigCircle.attr({
+      fill: "#bada55",
+      stroke: "#000",
+      strokeWidth: 5
+    })
+
+  </script>
+  </body>
+</html>
