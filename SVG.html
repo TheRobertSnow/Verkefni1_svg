@@ -34,12 +34,12 @@
     var s = Snap(400, 400);
     ear1 = s.circle(70, 100, 50);
     ear2 = s.circle(230, 100, 50);
-    head = s.circle(150, 180, 80);
+    head1 = s.circle(150, 180, 80);
     face1 = s.ellipse(150, 220, 55, 30);
     face2 = s.ellipse(130, 180, 25, 50);
     face3 = s.ellipse(170, 180, 25, 50);
 
-    var head = s.group(ear1, ear2, head);
+    var head = s.group(ear1, ear2, head1);
     var face = s.group(face1, face2, face3);
     head.attr({
 
@@ -47,6 +47,12 @@
     face.attr({
       fill: "white"
     });
+    face.click(function(){
+      face.attr({
+        fill: "yellow"
+      })
+    });
+
   </script>
   </body>
 </html>
