@@ -13,12 +13,6 @@
     <path class="text" d="M200,15 C200,15 300,205 300,205 M200,205 C200,205 300,15 300,15"/>
   </svg>
   <style>
-    rect {
-      fill: #f33;
-    }
-    circle {
-      fill: #3f3;
-    }
     .text {
       fill: none;
       stroke: #333333;
@@ -37,14 +31,22 @@
     }
   </style>
   <script>
-    var s = Snap();
-    bigCircle = s.circle(150, 100, 50);
-    bigCircle.attr({
-      fill: "#bada55",
-      stroke: "#000",
-      strokeWidth: 5
-    })
+    var s = Snap(400, 400);
+    ear1 = s.circle(70, 100, 50);
+    ear2 = s.circle(230, 100, 50);
+    head = s.circle(150, 180, 80);
+    face1 = s.ellipse(150, 220, 55, 30);
+    face2 = s.ellipse(130, 180, 25, 50);
+    face3 = s.ellipse(170, 180, 25, 50);
 
+    var head = s.group(ear1, ear2, head);
+    var face = s.group(face1, face2, face3);
+    head.attr({
+
+    });
+    face.attr({
+      fill: "white"
+    });
   </script>
   </body>
 </html>
